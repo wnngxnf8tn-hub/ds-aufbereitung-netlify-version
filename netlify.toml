@@ -1,35 +1,5 @@
-headersOrigin = "inline"
-redirectsOrigin = "inline"
-
-[functions]
-
-  [functions."*"]
-
-[[plugins]]
-origin = "default"
-package = "@netlify/plugin-nextjs"
-
-  [plugins.inputs]
-
 [build]
-publish = "/Users/julian/devin_webseite/out"
-publishOrigin = "config"
-commandOrigin = "config"
-command = "npm run build"
-
-  [build.environment]
-
-  [build.processing]
-
-    [build.processing.css]
-
-    [build.processing.html]
-
-    [build.processing.images]
-
-    [build.processing.js]
-
-  [build.services]
+publish = "."
 
 [[headers]]
 for = "/_next/static/*"
@@ -48,10 +18,6 @@ force = false
   w = ":width"
   q = ":quality"
 
-  [redirects.conditions]
-
-  [redirects.headers]
-
 [[redirects]]
 from = "/_ipx/*"
 to = "/.netlify/images?url=:url&w=:width&q=:quality"
@@ -62,7 +28,3 @@ force = false
   url = ":url"
   w = ":width"
   q = ":quality"
-
-  [redirects.conditions]
-
-  [redirects.headers]
